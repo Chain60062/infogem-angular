@@ -1,0 +1,7 @@
+#main-product-grid {
+  margin: 36px;
+}
+app-product-card {
+  width: 99%;
+  height: 99%;
+}

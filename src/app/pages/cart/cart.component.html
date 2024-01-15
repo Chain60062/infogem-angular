@@ -1,0 +1,53 @@
+<mat-stepper>
+  <mat-step label="Carrinho" state="cart">
+    <p>Put down your phones.</p>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step label="Dados da Compra" state="contact">
+    <p>Socialize with each other.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step label="Pagamento" state="payment">
+    <p>Socialize with each other.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step label="Revisão" state="review">
+    <p>Socialize with each other.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step label="Concluído" state="done">
+    <p>You're welcome.</p>
+  </mat-step>
+
+  <!-- Icon overrides. -->
+  <ng-template matStepperIcon="contact">
+    <mat-icon>contact_mail</mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="cart">
+    <mat-icon>shopping_cart</mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="payment">
+    <mat-icon>credit_card</mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="review">
+    <mat-icon>remove_red_eye</mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="done">
+    <mat-icon>done_outline</mat-icon>
+  </ng-template>
+</mat-stepper>

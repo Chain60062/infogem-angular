@@ -1,0 +1,18 @@
+#copyright-notice {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+#footer-grid-container {
+  position: relative;
+  top: 200px;
+}
+footer {
+  position: relative;
+  background-color: #880e4f;
+  min-height: 55vh;
+  bottom: 0;
+}

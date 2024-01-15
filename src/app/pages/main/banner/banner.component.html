@@ -1,0 +1,33 @@
+<div class="slide-container">
+  @for(slidePath of slidePaths; track i; let i = $index){
+  <figure class="slide fade" [ngClass]="{ active: i === currentSlide }">
+    <img
+      class="slide-img"
+      [src]="'/assets/' + slidePath"
+      style="width: 100%"
+      alt="banner"
+    />
+  </figure>
+  }
+  <!-- Next and previous buttons -->
+  <a class="prev" (click)="nextSlide(-1)" (keyup)="nextSlide(-1)" tabindex="1"
+    >&#10094;</a
+  >
+  <a class="next" (click)="nextSlide(1)" (keyup)="nextSlide(1)" tabindex="2"
+    >&#10095;</a
+  >
+</div>
+<br />
+
+<!-- The dots/circles -->
+<div class="slide-dot-container">
+  @for(slidePath of slidePaths; track i; let i = $index){
+  <span
+    class="dot"
+    (click)="changeCurrentSlide(i)"
+    (keyup)="changeCurrentSlide(i)"
+    [ngClass]="{ active: i === currentSlide }"
+    tabindex="3"
+  ></span>
+  }
+</div>

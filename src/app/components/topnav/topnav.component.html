@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <span>InfoGem</span>
+  <span id="icon-spacer"></span>
+
+  <a mat-icon-button mat-icon-button routerLink="/profile" routerLinkActive="active">
+    <mat-icon>account_circle</mat-icon>
+  </a>
+
+  <button mat-icon-button>
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+
+  <a mat-icon-button routerLink="/cart" routerLinkActive="active">
+    <mat-icon
+      [matBadgeHidden]="numberItems === 0"
+      [matBadge]="numberItems"
+      matBadgePosition="before"
+      matBadgeColor="accent"
+      aria-hidden="false"
+    >
+      shopping_cart
+    </mat-icon>
+  </a>
+
+  <span id="menu-spacer"></span>
+
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
