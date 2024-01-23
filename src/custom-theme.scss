@@ -12,7 +12,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 
-$infogem-secondary-palette: (
+$application-secondary-palette: (
   50: #ddf5f1,
   100: #abe5da,
   200: #6fd4c2,
@@ -37,7 +37,7 @@ $infogem-secondary-palette: (
   )
 );
 
-$infogem-primary-palette: (
+$application-primary-palette: (
   50: #fce4ec,
   100: #f8bbd0,
   200: #f48fb1,
@@ -62,17 +62,17 @@ $infogem-primary-palette: (
   )
 );
 
-$InfoGemNg-primary: mat.define-palette($infogem-primary-palette, 500, 200, 700);
-$InfoGemNg-accent: mat.define-palette($infogem-secondary-palette, 500, 200, 700);
-$InfoGemNg-warn: mat.define-palette(mat.$red-palette);
+$application-primary: mat.define-palette($application-primary-palette, 500, 200, 700);
+$application-accent: mat.define-palette($application-secondary-palette, 500, 200, 700);
+$application-warn: mat.define-palette(mat.$red-palette);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$InfoGemNg-theme: mat.define-light-theme(
+$application-theme: mat.define-light-theme(
   (
     color: (
-      primary: $InfoGemNg-primary,
-      accent: $InfoGemNg-accent,
-      warn: $InfoGemNg-warn
+      primary: $application-primary,
+      accent: $application-accent,
+      warn: $application-warn
     )
   )
 );
@@ -80,4 +80,4 @@ $InfoGemNg-theme: mat.define-light-theme(
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($InfoGemNg-theme);
+@include mat.all-component-themes($application-theme);
