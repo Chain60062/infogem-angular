@@ -1,9 +1,8 @@
 <div id="main-product-grid">
   <mat-grid-list
-    [cols]="gridBreakpoint"
+    [cols]="currentScreenSize"
     rowHeight="1:1"
     gutterSize="5vw"
-    (window:resize)="handleResize($event)"
   >
     @for(product of products; track $index){
     <mat-grid-tile class="main-product-card">

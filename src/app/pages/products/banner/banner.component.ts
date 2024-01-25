@@ -1,6 +1,5 @@
 import { Component, OnDestroy, afterNextRender, NgZone } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-banner',
   standalone: true,
@@ -12,7 +11,7 @@ export class BannerComponent implements OnDestroy {
   slidePaths: string[];
   currentSlide: number;
   slideCount: number;
-  timerId = 0;
+  intervalId = 0;
 
   constructor(private ngZone: NgZone) {
     this.slidePaths = [
@@ -26,17 +25,16 @@ export class BannerComponent implements OnDestroy {
 
     afterNextRender(() => {
       this.ngZone.run(() => {
-        this.timerId = window.setInterval(() => {
+        this.intervalId = window.setInterval(() => {
           this.nextSlide(1);
-          console.log('next');
         }, 5000);
       });
     });
   }
 
   ngOnDestroy() {
-    if (this.timerId) {
-      clearInterval(this.timerId);
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
     }
   }
 

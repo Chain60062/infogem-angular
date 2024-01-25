@@ -1,10 +1,9 @@
 <footer>
   <div id="footer-grid-container">
     <mat-grid-list
-      [cols]="gridBreakpoint"
+      [cols]="currentScreenSize"
       rowHeight="50px"
       gutterSize="14px"
-      (window:resize)="handleResize($event)"
     >
       <mat-grid-tile>
         <p>About</p>
