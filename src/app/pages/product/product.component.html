@@ -1,1 +1,13 @@
-<p>product works!</p>
+<app-topnav></app-topnav>
+<mat-card>
+  <div class="row">
+    <div class="column">
+      <div class="images-column">Some Text in Column One</div>
+    </div>
+    <div class="column">
+      @if (product) {
+      <div class="product-column">{{ product.productName }}</div>
+      }
+    </div>
+  </div>
+</mat-card>

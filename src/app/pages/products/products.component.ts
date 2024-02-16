@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { TopnavComponent } from '../../shared/topnav/topnav.component';
@@ -23,7 +23,4 @@ export class ProductsComponent{
   products: Product[] = [];
   constructor(private productsService: ProductsService) {}
 
-  // ngOnInit(): void {
-  //   this.products = this.productsService.getProducts();
-  // }
 }

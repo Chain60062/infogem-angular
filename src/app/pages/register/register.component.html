@@ -1,0 +1,67 @@
+<form [formGroup]="loginForm">
+  <mat-form-field>
+    <mat-label>CPF</mat-label>
+    <input type="text" matInput formControlName="cpf" mask="000.000.000-00" />
+    @if(loginForm.controls.cpf.invalid){
+    <mat-error>{{ getCpfErrorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nome Completo</mat-label>
+    <input type="text" matInput formControlName="name" />
+    @if(loginForm.controls.name.invalid){
+    <mat-error>{{ getNameErrorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Telefone</mat-label>
+    <input type="tel" matInput formControlName="phone" prefix="+55" mask="(00) 0 0000-0000" />
+    @if(loginForm.controls.phone.invalid){
+    <mat-error>{{ getPhoneErrorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="email" />
+    @if(loginForm.controls.email.invalid){
+    <mat-error>{{ getEmailErrorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Data de Nascimento</mat-label>
+    <input
+      type="text"
+      [matDatepicker]="picker"
+      matInput
+      formControlName="birthDate"
+    />
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+    @if(loginForm.controls.birthDate.invalid){
+    <mat-error>{{ getBirthDateErrorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Senha</mat-label>
+    <input type="password" matInput formControlName="password" />
+    @if(loginForm.controls.password.invalid){
+    <mat-error>{{ getPasswordErrorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Confirmar Senha</mat-label>
+    <input type="password" matInput formControlName="confirmPassword" />
+    @if(loginForm.controls.confirmPassword.invalid){
+    <mat-error>{{ getConfirmPasswordErrorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Entrar</button>
+</form>

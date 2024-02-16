@@ -1,0 +1,26 @@
+mat-card {
+  height: 98vh;
+  width: 70vw;
+  margin: 2vh auto 2vh auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.images-column {
+  background-color: blue;
+  height: 80vh;
+}
+
+.product-column {
+  background-color: green;
+  height: 80vh;
+}

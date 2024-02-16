@@ -1,12 +1,12 @@
 <div id="main-product-grid">
-  <mat-grid-list
-    [cols]="currentScreenSize"
-    rowHeight="1:1"
-    gutterSize="5vw"
-  >
+  <mat-grid-list [cols]="numberOfGrids" rowHeight="1:1" gutterSize="5vw">
     @for(product of products; track $index){
     <mat-grid-tile class="main-product-card">
-      <app-product-card></app-product-card>
+      <app-product-card
+        [product]="product"
+        [routerLink]="['product', product.productId, product.slug]"
+        routerLinkActive="active"
+      ></app-product-card>
     </mat-grid-tile>
     }
   </mat-grid-list>
