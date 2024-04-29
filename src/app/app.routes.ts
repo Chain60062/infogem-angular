@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { CartComponent } from './pages/cart/cart.component';
-import { ProductsComponent } from './pages/products/products.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { ProductComponent } from './pages/product/product.component';
-import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+import { CartComponent } from './modules/cart/cart.component';
+import { HomeComponent } from './modules/home/home.component';
+import { ProfileComponent } from './modules/profile/profile.component';
+import { ProductComponent } from './modules/product/product.component';
+import { NotfoundComponent } from './modules/notfound/notfound.component';
+import { LoginComponent } from './modules/auth/login/login.component';
+import { RegisterComponent } from './modules/auth/register/register.component';
 
 export const routes: Routes = [
-  { path: '', component: ProductsComponent },
+  { path: '', component: HomeComponent },
   { path: 'cart', component: CartComponent, title: 'Carrinho' },
   { path: 'profile/:username', component: ProfileComponent },
   { path: 'product/:id/:slug', component: ProductComponent },

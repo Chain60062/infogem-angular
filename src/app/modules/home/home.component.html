@@ -1,0 +1,12 @@
+<app-topnav></app-topnav>
+<app-banner></app-banner>
+<app-product-grid [products]="paginatedList.items"></app-product-grid>
+<mat-paginator #paginator
+               (page)="handlePageEvent($event)"
+               [length]="paginatedList.totalPages"
+               [pageSize]="pageSize"
+               [showFirstLastButtons]="true"
+               [pageIndex]="pageIndex"
+               aria-label="Select page">
+</mat-paginator>
+<app-footer></app-footer>

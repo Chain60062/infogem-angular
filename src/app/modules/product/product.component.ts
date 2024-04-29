@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ProductService } from './product.service';
-import { TopnavComponent } from '../../shared/topnav/topnav.component';
+import { TopnavComponent } from '../../shared/components/topnav/topnav.component';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from './product.interface';
+import { Product } from '../../shared/models/product.model';
 @Component({
   selector: 'app-product',
   standalone: true,
